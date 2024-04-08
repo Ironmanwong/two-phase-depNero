@@ -1,0 +1,22 @@
+4                        # Type (1: exp; 2: flat; 3: chute; 4:hsiaolin case)
+1                        # Data Export Type (1:dimensionless, 2:dimensional)
+1400.0                    # Total simulation time (s)
+3.0                      # Each output time (s)
+1.42                     # Fluid Phase Density [1.0]
+2.60                     # Solid Phase Density [2.64]
+0.03                     # Manning coefficient [0.016]
+16.0                     # Angle of basal friction (solid phase) [34.2] delta
+6.0                      # Drag coefficient [1.5] cD
+268                      # Viscous number [94048] NR
+5.0                      # Navier fluid friction coefficient [0.1] vartheta
+0.5                      # Sediment median diameter (m) [0.0026] 
+0.5                      # Initial value of solid volume fraction [0.5] 
+0.62                     # Deposit heap solid volume fraction [0.62] 
+0.38                     # Porosity of bottom [0.38] 
+0.04                     # Deposition coefficient [0.04] 
+1.6                      # Critical value for deposition [1.6] 
+0.00008                  # Erosion coefficient [0.00008] 
+0.04                    # Critical Shields parameter [0.04] 
+0.022                    # Inflow depth (m) [0.022]
+./Data/hsiaolin_topo_res20.asc      # Topography data (DEM)
+./Data/hsiaolin_init_res20.asc	     # Initial depth

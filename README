@@ -1,0 +1,152 @@
+% ----------------------------------------------------------------------------- %
+    Two-Phase Approach to Modeling the Grain-Fluid Flows 
+    with Depositioin and Entrainment over Rugged Topography
+% ----------------------------------------------------------------------------- %
+
+With the following code(s) you may reproduce the results shown in the
+manuscript titled "Two-Phase Approach to Modeling the Grain-Fluid Flows
+with Deposition and Entrainment over Rugged Topography".
+
+The results in the manuscript are saved in the following directories:
+
+(PS Due to huge data size, the computed results would be available by request.
+    Please feel free to contact Dr. Tai by email: yctai@mail.ncku.edu.tw)
+
+--------------------------------------------------------------------------
+SYSTEM REQUIREMENT:
+
+Linux OS   : 18.04 LTS, 20.04 LTS and 22.04 LTS
+CUDA       : 11.2 or later
+
+--------------------------------------------------------------------------
+EXECUTABLE CODE:  
+
+main_2Pb_dep 
+
+
+--------------------------------------------------------------------------
+REQUIREMENT:
+
+Create a directory 'result2Pb' in the working directory for the computed results
+
+e.g. If you are going to run the code in the directory '/user/yct/',
+     the direction '/user/yct/result2Pb' is needed.
+     
+
+--------------------------------------------------------------------------
+RUN THE CODE: 
+
+./main_2Pb_dep
+
+
+--------------------------------------------------------------------------
+PARAMETER SETTING: par_List
+
+par_Exp   : for Experiment 
+
+par_Flat_withED     : for simple horizontal flat plane computation with deposition and erosion
+par_Flat_withoutED  : for simple horizontal flat plane computation without deposition and erosion
+
+par_Chute_withED    : for simple chute computation with deposition and erosion
+par_Chute_withoutED : for simple chute computation without deposition and erosion
+
+par_HS1_withED      : for 2009 Hsiaolin event (d50 = 0.5 m) with deposition and erosion 
+par_HS1_withoutED   : for 2009 Hsiaolin event (d50 = 0.5 m) without deposition and erosion
+par_HS2_withED      : for 2009 Hsiaolin event (d50 = 0.2 m) with deposition and erosion
+
+par_List  : parameters used in the computing code
+
+(PS  The easiest way is to copy either "par_Exp" or "par_Flat..." or "par_Chute..." or "par_HS..." to "par_List".)
+
+
+--------------------------------------------------------------------------
+TOPOGRAPHY DATA: (in directory "Data")
+
+for Experiment:
+
+    exp_topo.asc   =>  topography data
+    exp_init.asc   =>  initial depth of the flowing body
+
+
+for idealized numerical examples:
+
+    Horizontal flat plane:
+    	 flat_topo.asc    =>  flat plane geometry
+    	 flat_init.asc    =>  initial depth of the flowing body
+
+    Chute:
+    	 chute_topo.asc   =>  chute geometry
+    	 chute_init.asc   =>  initial depth of the flowing body
+
+for 2009 Hsiaolin event:
+
+         shiaolin_topo_res20.asc   =>  topography data
+         shiaolin_init_res20.asc   =>  initial depth of the flowing body
+
+
+% ------------------------------------------------------------------------ %
+   		Plotting Tools (in the directory "Plot_Tool")
+% ------------------------------------------------------------------------ %
+REMARK: The figures are plotted by MatLab. Please run the provided plotting
+	code(s) in MatLab.
+
+Idealized numerical example : for Figs. 2, 5 and 6
+
+    ./Plot_Tool/ploth_2P_flat.p(Horizontal flat plane)    
+        ==> top view of the flow thickness and deposition (similar to Fig. 2)
+
+    ./Plot_Tool/ploth_2P_chute.p(Inclined curved chute)   
+        ==> top view and section view of the flow thickness and deposition (similar to Figs. 5 and 6)
+
+Experiment: for Figs. 8, 9 and 10
+
+    ./Plot_Tool/ploth_2P_exp1.p    
+        ==> top view of the flow thickness and deposition (Figs. 8 and 9)
+
+    ./Plot_Tool/ploth_2P_exp2.p    
+        ==> top view and section view of the flow thickness and deposition (Fig. 10)
+
+
+
+
+% ------------------------------------------------------------------------ %
+   		Application to Other Scenario
+% ------------------------------------------------------------------------ %
+
+Remark: As long as the original work is properly citied and not utilized for commercial purposes, 
+the above code(s) may be used in academic.
+
+Case I: "Experiment" or "numerical example" with different values of parameters, 
+        e.g. the density of solid or fluid phase, Manning coefficient, Drag coefficient etc.
+	
+     (a) Just modify the values in the parameter file "par_List".
+
+Case II: another event
+
+     (a) You have to prepare the topography data (in .asc format) and data file for
+           initial depth (in .asc format).
+	 (b) Save them in the directory "Data".
+	 (c) Based on the new DEM, set the values of the parameters in "par_List".
+     (d) Create a directory 'result2Pb' in the working directory for the computed results
+	 (e) Ploting: select the appropriate "./ploth_2P_*.p" and run it in the command window.
+
+REMARK: The format should be identical to the original file.
+
+
+
+
+% ------------------------------------------------------------------------ %
+   		Help (email: yctai@mail.ncku.edu.tw)
+% ------------------------------------------------------------------------ %
+
+In case of any question by applying the above code(s), please feel free
+to contact Dr. Yih-Chin Tai. And any suggestion(s) or collaboration for
+extending the current code is welcome. 
+
+Prof. Dr.-Ing Yih-Chin Tai
+email: yctai@mail.ncku.edu.tw
+Dept. Hydraulic and Ocean Engineering
+National Cheng Kung University, Taiwan
+
+
+First version: 2024/03/13

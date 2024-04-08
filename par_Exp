@@ -1,0 +1,22 @@
+1                        # Type (1: exp; 2: flat; 3: chute)
+2                        # Data Export Type (1:dimensionless, 2:dimensional)
+100.0                    # Total simulation time (s)
+1.0                      # Each output time (s)
+1.00                     # Fluid Phase Density [1.0]
+2.64                     # Solid Phase Density [2.64]
+0.016                    # Manning coefficient [0.016]
+34.2                     # Angle of basal friction (solid phase) [34.2] 
+1.7                      # Drag coefficient [1.5] 
+94048                    # Viscous number [94048] 
+0.1                      # Navier fluid friction coefficient [0.1] 
+0.0026                   # Sediment median diameter (m) [0.0026] 
+0.5                      # Initial value of solid volume fraction [0.5] 
+0.62                     # Deposit heap solid volume fraction [0.62] 
+0.38                     # Porosity of bottom [0.38] 
+0.04                     # Deposition coefficient [0.04] 
+1.6                      # Critical value for deposition [1.6] 
+0.00008                  # Erosion coefficient [0.00008] 
+0.04                     # Critical Shields parameter [0.04] 
+0.022                    # Inflow depth (m) [0.022]
+./Data/exp_topo.asc      # Topography data (DEM)
+./Data/exp_init.asc	     # Initial depth
